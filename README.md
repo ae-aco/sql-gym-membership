@@ -8,7 +8,7 @@ A gym which specialises in boxing classes and training requires a database to st
 <p>
 
 ## Files used
-All files can be found in this branch "sql-gym-membership".
+All files can be found in their folders in this branch: "sql-gym-membership".
 - *boxing_gym.sql*
   - This file can be found in "schema".
   - Use this file in mySQL to create and use the database. The member, trainer, membership type, classes etc. data is already in this file.
@@ -54,6 +54,6 @@ If you wish to run the commands, then you can copy and paste the commands into a
 8. A new trainer has joined the gym - Tom Azure. Add Tom and the new specialism he teaches - Kickboxing.
 
 ## What I Learned
-After creating the database and running the commands, I realised there was a lot more potential for furtehr normalisation.
+After creating the database and running the commands, I realised there was a lot more potential for further normalisation.
 For example, the "Drinks" entity could have been broken down further by type (still, sparkling) and category (vegan, non-vegan).
 I'll take this into account for future projects! :)
