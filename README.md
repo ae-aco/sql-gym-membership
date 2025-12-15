@@ -12,9 +12,9 @@ All files can be found in this branch: `sql-gym-membership`.
 Use this file in mySQL to create and populare the database. Dummy data is included in this file.
 - [queries_for_db.sql](queries/queries_for_db.sql)
   - This file contains the sample of queries used to return results from the database, Each command is commented with explanations.
-- [boxing_gym_diagram.sql](docs/boxing_gym_diagram.png)
+- [boxing_gym_diagram.png](docs/boxing_gym_diagram.png)
   - This diagram shows the structure of the database and entity relationships. 
-- [Query screenshots](docs/query-screenshots)  
+- [Query screenshots](docs/query-screenshots/)
   - This file can be found in "docs" and contains the results of the queries when run in MySQL.
   
 ## Database Structure
