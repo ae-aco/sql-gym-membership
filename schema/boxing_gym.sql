@@ -52,8 +52,7 @@ VALUES
 ('Amelia', 'Fernandez', '1990-02-14', 'female', 'amelia.fernandez@email.com', '+447700456789', '15 Piccadilly Ave, Birmingham', 1, '2025-02-10', '2025-03-10'),
 ('Charlotte', 'Dubois', '1985-09-30', 'female', 'charlotte.dubois@email.com', '+447700567890', '22 Kings Road, Edinburgh', 2, '2025-01-28', '2025-02-28');
 
-/* I've added a trainers table, they are likely to be self-employed and only work at the location.
-This information is useful for enquiry and booking purposes. */
+/* I've added a trainers table, they are likely to be self-employed and only work at the location. This information is useful for enquiry and booking purposes. */
 CREATE TABLE trainers(
 trainer_id INT PRIMARY KEY AUTO_INCREMENT,
 first_name VARCHAR(50) NOT NULL,
@@ -81,9 +80,7 @@ VALUES
 ('Sophia', 'Evans', '1989-06-22', 'female', 'sophia.evans@example.com', '07700456123', 4, 'Women’s Sparring', 35.00, 'Wed-Sat'),
 ('Emily', 'Martinez', '1994-10-07', 'female', 'emily.martinez@example.com', '07700789654', 2, 'Women’s Beginner Boxing', 28.00, 'Mon-Fri');
 
-/* The classes table holds information on the classes taking place at the gym. 
-The trainer ID is linked to this table because they lead the classes.
-Classes are set to a maximum capacity of 8 bookings or less. 1 booking = 1 person.*/
+/* The classes table holds information on the classes taking place at the gym. The trainer ID is linked to this table because they lead the classes. Classes are set to a maximum capacity of 8 bookings or less. 1 booking = 1 person.*/
 CREATE TABLE classes(
 class_id INT PRIMARY KEY AUTO_INCREMENT,
 class_name VARCHAR(255) NOT NULL,
@@ -108,8 +105,7 @@ VALUES
 ('Beginners Boxing', 5, 'Saturday', '11:00:00', 60, 8),
 ('Intermediate Boxing', 6, 'Saturday', '12:00:00', 60, 8);
 
-/* The bookings entity holds data on which classes members have booked, this entity
- will be useful when querying if a class is at max_capacity.*/
+/* The bookings entity holds data on which classes members have booked, this entity will be useful when querying if a class is at max_capacity.*/
 CREATE TABLE bookings(
 booking_id INT PRIMARY KEY AUTO_INCREMENT, 
 member_id INT, 
@@ -119,8 +115,7 @@ FOREIGN KEY (member_id) REFERENCES members(member_id),
 FOREIGN KEY (class_id) REFERENCES classes(class_id)
 );
 
-/* This entity is only relevant to the membership table, not purchases 
-made by a member in the gym. This is useful to see if members have paid for their memberships.*/
+/* This entity is only relevant to the membership table, not purchases made by a member in the gym. This is useful to see if members have paid for their memberships.*/
 CREATE TABLE payments(
 payment_id INT PRIMARY KEY AUTO_INCREMENT, 
 member_id INT NOT NULL, 
@@ -130,9 +125,7 @@ payment_status ENUM('pending', 'completed', 'failed') NOT NULL,
 FOREIGN KEY (member_id) REFERENCES members(member_id)
 );
 
-/* I've included this table, as it would be useful for VIEWS. The idea behind this is that
-only management would be responsible for equipment maintenance for health and safety/insurance purposes, 
-so not all staff would have access to this data. */
+/* I've included this table, as it would be useful for VIEWS. The idea behind this is that only management would be responsible for equipment maintenance for health and safety/insurance purposes, so not all staff would have access to this data. */
 CREATE TABLE equipment(
 equipment_id INT PRIMARY KEY AUTO_INCREMENT, 
 equipment_name VARCHAR(255) NOT NULL, 
