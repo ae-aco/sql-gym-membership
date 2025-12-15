@@ -14,7 +14,7 @@ Use this file in mySQL to create and populare the database. Dummy data is includ
   - This file contains the sample of queries used to return results from the database, Each command is commented with explanations.
 - [boxing_gym_diagram.png](docs/boxing_gym_diagram.png)
   - This diagram shows the structure of the database and entity relationships. 
-- [Query screenshots](docs/query-screenshots/)
+- [Query screenshots](docs/query_screenshots/)
   - This file can be found in "docs" and contains the results of the queries when run in MySQL.
   
 ## Database Structure
